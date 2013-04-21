@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             exclude: [
                 ".git/",
                 ".gitignore",
-                ".sass_cache/",
+                ".sass-cache/",
                 "node_modules/",
                 "assets/sass/",
                 "Gruntfile.js",
