@@ -1,4 +1,4 @@
-# WordPress Bootstrap #
+# WordPress Plugin Bootstrap #
 
 This is a basic bootstrap to develop WordPress plugins using **Grunt**, **Compass**, **GIT** and **SVN**.
 
