@@ -18,7 +18,8 @@ module.exports = function(grunt) {
                 "Gruntfile.js",
                 "README.md",
                 "package.json",
-                "config.rb"
+                "config.rb",
+                "*.zip"
             ]
         },
 
@@ -101,6 +102,7 @@ module.exports = function(grunt) {
             }
         },
 
+        // rsync commands used to take the files to svn repository
         rsync: {
             tag: {
                 src: "./",
@@ -116,6 +118,7 @@ module.exports = function(grunt) {
             }
         },
 
+        // shell command to commit the new version of the plugin
         shell: {
             svn_add: {
                 command: 'svn add --force * --auto-props --parents --depth infinity -q',
@@ -137,6 +140,15 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+
+        // creates a zip of the plugin
+        zipdir: {
+            "your-plugin-name": {
+                src: ["./"],
+                dest: "./<%= pkg.name %>.zip",
+                exclude: "<%= svn_settings.exclude %>"
+            }
         }
 
     });
@@ -149,6 +161,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-imagemin");
     grunt.loadNpmTasks("grunt-rsync");
     grunt.loadNpmTasks("grunt-shell");
+    grunt.loadNpmTasks("grunt-wx-zipdir");
 
     // default task
     grunt.registerTask("default", [
@@ -159,9 +172,16 @@ module.exports = function(grunt) {
 
     // deploy task
     grunt.registerTask("deploy", [
+        "default",
         "rsync:tag",
         "rsync:trunk",
         "shell:svn_add",
         "shell:svn_commit"
+    ]);
+
+    // zip task
+    grunt.registerTask("zip", [
+        "default",
+        "zipdir"
     ]);
 };
