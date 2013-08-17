@@ -1,6 +1,9 @@
 module.exports = function(grunt) {
 "use strict";
 
+    // auto load grunt tasks
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
 
         // gets the package vars
@@ -144,14 +147,7 @@ module.exports = function(grunt) {
         }
     });
 
-    // load tasks
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-contrib-compass");
-    grunt.loadNpmTasks("grunt-contrib-imagemin");
-    grunt.loadNpmTasks("grunt-rsync");
-    grunt.loadNpmTasks("grunt-shell");
+    // tasks
 
     // default task
     grunt.registerTask("default", [
