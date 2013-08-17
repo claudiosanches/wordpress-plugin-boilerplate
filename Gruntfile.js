@@ -16,6 +16,7 @@ module.exports = function(grunt) {
                 ".editorconfig",
                 ".git/",
                 ".gitignore",
+                ".jshintrc",
                 ".sass-cache/",
                 "node_modules/",
                 "assets/sass/",
@@ -30,21 +31,7 @@ module.exports = function(grunt) {
         // javascript linting with jshint
         jshint: {
             options: {
-                "bitwise": true,
-                "eqeqeq": true,
-                "eqnull": true,
-                "immed": true,
-                "newcap": true,
-                "es5": true,
-                "esnext": true,
-                "latedef": true,
-                "noarg": true,
-                "node": true,
-                "undef": false,
-                "browser": true,
-                "trailing": true,
-                "jquery": true,
-                "curly": true
+                jshintrc: ".jshintrc"
             },
             all: [
                 "Gruntfile.js",
