@@ -141,17 +141,7 @@ module.exports = function(grunt) {
                     }
                 }
             }
-        },
-
-        // creates a zip of the plugin
-        zipdir: {
-            "your-plugin-name": {
-                src: ["./"],
-                dest: "./<%= pkg.name %>.zip",
-                exclude: "<%= svn_settings.exclude %>"
-            }
         }
-
     });
 
     // load tasks
@@ -162,7 +152,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-imagemin");
     grunt.loadNpmTasks("grunt-rsync");
     grunt.loadNpmTasks("grunt-shell");
-    grunt.loadNpmTasks("grunt-wx-zipdir");
 
     // default task
     grunt.registerTask("default", [
@@ -180,9 +169,4 @@ module.exports = function(grunt) {
         "shell:svn_commit"
     ]);
 
-    // zip task
-    grunt.registerTask("zip", [
-        "default",
-        "zipdir"
-    ]);
 };
