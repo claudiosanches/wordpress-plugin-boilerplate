@@ -46,8 +46,7 @@ class Your_Plugin_Name {
     function admin_scripts() {
 
         // Theme Options.
-        wp_register_script( 'your_plugin_slug-admin', plugins_url( 'assets/js/admin.min.js', __FILE__ ), array( 'jquery' ), null, true );
-        wp_enqueue_script( 'your_plugin_slug-admin' );
+        wp_enqueue_script( 'your_plugin_slug-admin', plugins_url( 'assets/js/admin.min.js', __FILE__ ), array( 'jquery' ), null, true );
     }
 
     /**
@@ -56,11 +55,11 @@ class Your_Plugin_Name {
      * @return void
      */
     public function enqueue_scripts() {
-        wp_register_script( 'your_plugin_slug', plugins_url( 'assets/js/main.min.js', __FILE__ ), array( 'jquery' ), null, true );
-        wp_enqueue_script( 'your_plugin_slug' );
+        // Scripts.
+        wp_enqueue_script( 'your_plugin_slug', plugins_url( 'assets/js/main.min.js', __FILE__ ), array( 'jquery' ), null, true );
 
-        wp_register_style( 'your_plugin_slug', plugins_url( 'assets/css/style.css', __FILE__ ), array(), null, 'all' );
-        wp_enqueue_style( 'your_plugin_slug' );
+        // Styles.
+        wp_enqueue_style( 'your_plugin_slug', plugins_url( 'assets/css/style.css', __FILE__ ), array(), null, 'all' );
     }
 
 }
