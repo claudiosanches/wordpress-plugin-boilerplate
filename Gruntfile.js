@@ -12,10 +12,11 @@ module.exports = function(grunt) {
 
         // plugin directories
         dirs: {
-            js:     "assets/js",
-            css:    "assets/css",
-            sass:   "assets/sass",
+            js: "assets/js",
+            css: "assets/css",
+            sass: "assets/sass",
             images: "assets/images",
+            fonts: "assets/fonts"
         },
 
         // svn settings
@@ -34,7 +35,6 @@ module.exports = function(grunt) {
                 "Gruntfile.js",
                 "README.md",
                 "package.json",
-                "config.rb",
                 "*.zip"
             ]
         },
@@ -65,8 +65,16 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    config: "config.rb",
                     force: true,
+                    httpPath: "",
+                    sassDir: "<%= dirs.sass %>",
+                    cssDir: "<%= dirs.css %>",
+                    imagesDir: "<%= dirs.images %>",
+                    javascriptsDir: "<%= dirs.js %>",
+                    fontsDir: "<%= dirs.fonts %>",
+                    environment: "production",
+                    relativeAssets: true,
+                    noLineComments: true,
                     outputStyle: "compressed"
                 }
             }
@@ -76,7 +84,7 @@ module.exports = function(grunt) {
         watch: {
             compass: {
                 files: [
-                    "<%= dirs.sass %>/**"
+                    "<%= compass.dist.options.sassDir %>/**"
                 ],
                 tasks: ["compass"]
             },
