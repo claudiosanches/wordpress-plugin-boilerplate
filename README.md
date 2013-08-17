@@ -1,4 +1,4 @@
-# WordPress Plugin Bootstrap #
+# WordPress Plugin Boilerplate #
 
 This is a basic bootstrap to develop WordPress plugins using **Grunt**, **Compass**, **GIT** and **SVN**.
 
@@ -65,10 +65,10 @@ $ grunt deploy
 
 ## License: ##
 
-WordPress Plugin Bootstrap is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published
+WordPress Plugin Boilerplate is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published
 by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-WordPress Plugin Bootstrap is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+WordPress Plugin Boilerplate is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 Get a copy of the GNU General Public License in <http://www.gnu.org/licenses/>.
