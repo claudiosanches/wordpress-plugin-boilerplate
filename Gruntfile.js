@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     // auto load grunt tasks
     require('load-grunt-tasks')(grunt);
 
-    grunt.initConfig({
+    var pluginConfig = {
 
         // gets the package vars
         pkg: grunt.file.readJSON("package.json"),
@@ -142,9 +142,14 @@ module.exports = function(grunt) {
                 }
             }
         }
-    });
+    };
 
-    // tasks
+    // initialize grunt config
+    // --------------------------
+    grunt.initConfig(pluginConfig);
+
+    // register tasks
+    // --------------------------
 
     // default task
     grunt.registerTask("default", [
