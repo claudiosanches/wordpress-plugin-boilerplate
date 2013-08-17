@@ -8,6 +8,16 @@ module.exports = function(grunt) {
 
         // gets the package vars
         pkg: grunt.file.readJSON("package.json"),
+
+        // plugin directories
+        dirs: {
+            js:     "assets/js",
+            css:    "assets/css",
+            sass:   "assets/sass",
+            images: "assets/images",
+        },
+
+        // svn settings
         svn_settings: {
             path: "/PATH/TO/YOUR/SVN/REPO/<%= pkg.name %>",
             tag: "<%= svn_settings.path %>/tags/<%= pkg.version %>",
@@ -35,8 +45,8 @@ module.exports = function(grunt) {
             },
             all: [
                 "Gruntfile.js",
-                "assets/js/admin.js",
-                "assets/js/main.js"
+                "<%= dirs.js %>/admin.js",
+                "<%= dirs.js %>/main.js"
             ]
         },
 
@@ -44,8 +54,8 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    "assets/js/admin.min.js": ["assets/js/admin.js"],
-                    "assets/js/main.min.js": ["assets/js/main.js"]
+                    "<%= dirs.js %>/admin.min.js": ["<%= dirs.js %>/admin.js"],
+                    "<%= dirs.js %>/main.min.js": ["<%= dirs.js %>/main.js"]
                 }
             }
         },
@@ -65,7 +75,7 @@ module.exports = function(grunt) {
         watch: {
             compass: {
                 files: [
-                    "assets/sass/**"
+                    "<%= dirs.sass %>/**"
                 ],
                 tasks: ["compass"]
             },
@@ -86,9 +96,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: "assets/images/",
-                    src: "assets/images/**",
-                    dest: "assets/images/"
+                    cwd: "<%= dirs.images %>/",
+                    src: "**",
+                    dest: "<%= dirs.js %>/"
                 }]
             }
         },
