@@ -1,5 +1,5 @@
-"use strict";
 module.exports = function(grunt) {
+"use strict";
 
     grunt.initConfig({
 
@@ -10,6 +10,7 @@ module.exports = function(grunt) {
             tag: "<%= svn_settings.path %>/tags/<%= pkg.version %>",
             trunk: "<%= svn_settings.path %>/trunk",
             exclude: [
+                ".editorconfig",
                 ".git/",
                 ".gitignore",
                 ".sass-cache/",
