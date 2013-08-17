@@ -1,5 +1,6 @@
-module.exports = function(grunt) {
 "use strict";
+
+module.exports = function(grunt) {
 
     // auto load grunt tasks
     require('load-grunt-tasks')(grunt);
