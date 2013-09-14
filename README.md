@@ -51,6 +51,11 @@ $ grunt deploy
 
 ## Changelog ##
 
+##### 2.1.0 #####
+
+* Updated the grunt tasks.
+* Improved the rsync tasks.
+
 ##### 2.0.0 #####
 
 * Updated the grunt tasks.

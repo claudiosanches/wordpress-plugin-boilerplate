@@ -114,17 +114,22 @@ module.exports = function(grunt) {
 
         // rsync commands used to take the files to svn repository
         rsync: {
+            options: {
+                args: ["--verbose"],
+                exclude: "<%= svn_settings.exclude %>",
+                recursive: true
+            },
             tag: {
-                src: "./",
-                dest: "<%= svn_settings.tag %>",
-                recursive: true,
-                exclude: "<%= svn_settings.exclude %>"
+                options: {
+                    src: "./",
+                    dest: "<%= svn_settings.tag %>"
+                }
             },
             trunk: {
+                options: {
                 src: "./",
-                dest: "<%= svn_settings.trunk %>",
-                recursive: true,
-                exclude: "<%= svn_settings.exclude %>"
+                dest: "<%= svn_settings.trunk %>"
+                }
             }
         },
 
