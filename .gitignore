@@ -1,5 +1,7 @@
 .DS_Store
 .sass-cache/
 node_modules/
-assets/css/
-*.min.*
+admin/assets/css/
+public/assets/css/
+admin/assets/js/*.min.js
+public/assets/js/*.min.js
