@@ -4,7 +4,7 @@ This is a basic bootstrap to develop WordPress plugins using **Grunt**, **Compas
 You will use your GIT repository as plugin development environment and the WordPress plugin repository as production environment.  
 Being possible to run commands with the Grunt to deploy its new versions.
 
-This project was made based on [WordPress-Plugin-Boilerplate by tommcfarlin](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate).  
+This project was made based on [WordPress-Plugin-Boilerplate by tommcfarlin](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate).
 
 ## Requirements: ##
 
@@ -50,6 +50,14 @@ $ grunt deploy
 ```
 
 ## Changelog ##
+
+##### 3.0.0 #####
+
+* Updated the dependencies.
+* Fixed the assets directories based on [WordPress-Plugin-Boilerplate by tommcfarlin](https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate).
+* Improved the grunt tasks.
+* Added .jshintrc with WordPress standards.
+* Fixed the `indent_style` to `tab` in .editorconfig file.
 
 ##### 2.1.0 #####
 
