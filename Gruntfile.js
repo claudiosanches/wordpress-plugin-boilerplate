@@ -173,7 +173,7 @@ module.exports = function( grunt ) {
 		shell: {
 			// Remove delete files.
 			svn_remove: {
-				command: 'svn st | grep "^!" | awk "{print $2}" | xargs svn --force delete',
+				command: 'svn st | grep \'^!\' | awk \'{print $2}\' | xargs svn --force delete',
 				options: {
 					stdout: true,
 					stderr: true,
