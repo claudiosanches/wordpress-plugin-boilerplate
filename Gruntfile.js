@@ -41,7 +41,10 @@ module.exports = function( grunt ) {
 				'.jshintrc',
 				'.sass-cache/',
 				'node_modules/',
-				'assets/sass/',
+				'admin/assets/sass/',
+				'admin/assets/js/admin.js',
+				'public/assets/js/public.js',
+				'public/assets/sass/',
 				'Gruntfile.js',
 				'README.md',
 				'package.json',
@@ -129,13 +132,13 @@ module.exports = function( grunt ) {
 						expand: true,
 						cwd: '<%= dirs.admin.images %>/',
 						src: '**/*.{png,jpg,gif}',
-						dest: '<%= dirs.admin.js %>/'
+						dest: '<%= dirs.admin.images %>/'
 					},
 					{
 						expand: true,
 						cwd: '<%= dirs.front.images %>/',
 						src: '**/*.{png,jpg,gif}',
-						dest: '<%= dirs.front.js %>/'
+						dest: '<%= dirs.front.images %>/'
 					},
 					{
 						expand: true,
