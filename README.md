@@ -1,5 +1,7 @@
 # WordPress Plugin Boilerplate #
 
+**Project outdated**
+
 This is a basic bootstrap to develop WordPress plugins using **Grunt**, **Compass**, **GIT** and **SVN**.  
 You will use your GIT repository as plugin development environment and the WordPress plugin repository as production environment.  
 Being possible to run commands with the Grunt to deploy its new versions.
@@ -18,7 +20,7 @@ This project was made based on [WordPress-Plugin-Boilerplate by tommcfarlin](htt
 Clone this repo:
 
 ```bash
-$ git clone git@github.com:claudiosmweb/wordpress-plugin-bootstrap.git
+$ git clone https://github.com/claudiosanches/wordpress-plugin-boilerplate.git
 ```
 
 Install the dependencies of the grunt:
